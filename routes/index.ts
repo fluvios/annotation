@@ -4,8 +4,9 @@
 import home from "./Home.route";
 import legal from "./Legal.route";
 import settings from "./Settings.route";
+import subject from "./Subject.route";
 
 /**
  * Exports the list of application routes
  */
-export default [home, settings, ...legal] as const;
+export default [home, settings, subject, ...legal] as const;
