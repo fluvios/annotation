@@ -55,6 +55,24 @@ function Subject(): JSX.Element {
           </Grid>
           <Grid item xs={12} sm={6}>
           </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Tingkat</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={subject}
+                label="Subject"
+                onChange={handleChange}
+              >
+                <MenuItem value={'Biologi'}>SD</MenuItem>
+                <MenuItem value={'Sejarah'}>SMP</MenuItem>
+                <MenuItem value={'Geografi'}>SMA</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+          </Grid>          
           <Grid item xs={12}>
             <TextField
               fullWidth
@@ -71,11 +89,10 @@ function Subject(): JSX.Element {
             <TextField
               fullWidth
               name="password"
-              label="Password"
+              label="Materi"
               multiline
               minRows={8}
               maxRows={8}              
-              type="password"
               id="password"
               autoComplete="new-password"
             />

@@ -15,7 +15,10 @@ module.exports = {
   },
 
   extends: ["eslint:recommended", "prettier"],
-
+  rules: {
+    'prettier/prettier': 0,
+  },
+  
   parserOptions: {
     ecmaVersion: 2022,
     sourceType: "module",
