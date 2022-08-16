@@ -97,106 +97,103 @@ function Annotator(): JSX.Element {
           <Grid item xs={6}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
-              <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>Pertanyaan 1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-          <Typography>
-          <Div>{"Jenis Pertanyaan yang akan dibuat"}</Div>
-          </Typography>
-          <ToggleButtonGroup
-      color="primary"
-      value={alignment}
-      exclusive
-      onChange={handleToggle}
-    >
-      <ToggleButton value="type1">Type 1</ToggleButton>
-      <ToggleButton value="type2">Type 2</ToggleButton>
-      <ToggleButton value="type3">Type 3</ToggleButton>
-      <ToggleButton value="type4">Type 4</ToggleButton>
-    </ToggleButtonGroup>
-          </Grid>
-          <Grid item xs={12}>
-    <TextField
-              fullWidth
-              name="password"
-              label="Highlight Text untuk dasar pertanyaan"
-              multiline
-              minRows={4}
-              maxRows={4}              
-              id="password"
-              autoComplete="new-password"
-            />
-    </Grid>   
-    <Grid item xs={9}></Grid>       
-    <Grid item xs={3}>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}>
-              Selesai Highlight
-            </Button>
-          </Grid>                                        
-          <Grid item xs={12}>
-          <TextField
-              fullWidth
-              name="password"
-              label="Tulis Pertanyaan"
-              multiline
-              minRows={4}
-              maxRows={4}              
-              id="password"
-              autoComplete="new-password"
-            />
-          </Grid>
-          <Grid item xs={12}>
-          <TextField
-              fullWidth
-              name="password"
-              label="Jawaban yang diharapkan"
-              multiline
-              minRows={4}
-              maxRows={4}              
-              id="password"
-              autoComplete="new-password"
-            />  
-          </Grid>
-          <Grid item xs={8}></Grid>
-          <Grid item xs={4}>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}>
-              Simpan Pertanyaan
-            </Button>
-          </Grid>                                        
-        </Grid>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography>Tambah Pertanyaan</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                  >
+                    <Typography>Pertanyaan 1</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Grid container spacing={2}>
+                      <Grid item xs={12}>
+                        <Typography>
+                          <Div>{"Jenis Pertanyaan yang akan dibuat"}</Div>
+                        </Typography>
+                        <ToggleButtonGroup
+                          color="primary"
+                          value={alignment}
+                          exclusive
+                          onChange={handleToggle}
+                        >
+                          <ToggleButton value="type1">Type 1</ToggleButton>
+                          <ToggleButton value="type2">Type 2</ToggleButton>
+                          <ToggleButton value="type3">Type 3</ToggleButton>
+                          <ToggleButton value="type4">Type 4</ToggleButton>
+                        </ToggleButtonGroup>
+                      </Grid>
+                    <Grid item xs={12}>
+                      <TextField
+                        fullWidth
+                        name="password"
+                        label="Highlight Text untuk dasar pertanyaan"
+                        multiline
+                        minRows={4}
+                        maxRows={4}              
+                        id="password"
+                        autoComplete="new-password"
+                      />
+                    </Grid>   
+                    <Grid item xs={9}></Grid>       
+                    <Grid item xs={3}>
+                      <Button
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        sx={{ mt: 3, mb: 2 }}>
+                        Selesai Highlight
+                      </Button>
+                    </Grid>                                        
+                    <Grid item xs={12}>
+                      <TextField
+                          fullWidth
+                          name="password"
+                          label="Tulis Pertanyaan"
+                          multiline
+                          minRows={4}
+                          maxRows={4}              
+                          id="password"
+                          autoComplete="new-password"
+                        />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <TextField
+                          fullWidth
+                          name="password"
+                          label="Jawaban yang diharapkan"
+                          multiline
+                          minRows={4}
+                          maxRows={4}              
+                          id="password"
+                          autoComplete="new-password"
+                        />  
+                    </Grid>
+                    <Grid item xs={8}></Grid>
+                    <Grid item xs={4}>
+                      <Button
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        sx={{ mt: 3, mb: 2 }}>
+                        Simpan Pertanyaan
+                      </Button>
+                    </Grid>                                        
+                  </Grid>
+                  </AccordionDetails>
+                </Accordion>
+                <Grid container>
+                  <Grid item xs={9}></Grid>
+                  <Grid item xs={3}>
+                    <Button
+                      type="submit"
+                      fullWidth
+                      variant="contained"
+                      sx={{ mt: 3, mb: 2 }}>
+                      Tambah Pertanyaan
+                    </Button>
+                  </Grid>               
+                </Grid>
               </Grid>
       <Grid item xs={12}>
       <TextField

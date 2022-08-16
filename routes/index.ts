@@ -4,10 +4,12 @@
 import annotator from "./Annotator.route";
 import home from "./Home.route";
 import legal from "./Legal.route";
+import login from "./Login.route";
 import settings from "./Settings.route";
+import signup from "./SignUp.route";
 import subject from "./Subject.route";
 
 /**
  * Exports the list of application routes
  */
-export default [home, settings, subject, annotator,  ...legal] as const;
+export default [home, login, signup, settings, subject, annotator,  ...legal] as const;

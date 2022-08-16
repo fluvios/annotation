@@ -5,13 +5,11 @@ import { ArrowDropDown, NotificationsNone } from "@mui/icons-material";
 import {
   AppBar,
   AppBarProps,
-  Avatar,
-  Button,
-  Chip,
+  Avatar, Chip,
   IconButton,
   Link,
   Toolbar,
-  Typography,
+  Typography
 } from "@mui/material";
 import * as React from "react";
 import { config, useAuth, useNavigate, useToggleTheme } from "../core";
@@ -130,13 +128,9 @@ export function AppToolbar(props: AppToolbarProps): JSX.Element {
           />
         )}
         {!me && (
-          <Button
-            variant="outlined"
-            href="/login"
-            color="primary"
-            onClick={signIn}
-            children="Log in / Register"
-          />
+          <Link color="inherit" underline="none" href="/login" onClick={navigate}>
+            Login
+          </Link>
         )}
       </Toolbar>
 
