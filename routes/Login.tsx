@@ -6,7 +6,7 @@ import {
 } from '@mui/material';
 import { FC } from 'react';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { literal, object, string, TypeOf } from 'zod';
 import FormInput from '../common/FormInput';
 
@@ -60,6 +60,8 @@ const Login: FC = () => {
     password: '',
   };
 
+  const navigate = useNavigate();
+
   // 👇 The object returned from useForm Hook
   const methods = useForm<ILogin>({
     resolver: zodResolver(loginSchema),
@@ -69,6 +71,7 @@ const Login: FC = () => {
   // 👇 Submit Handler
   const onSubmitHandler: SubmitHandler<ILogin> = (values: ILogin) => {
     console.log(values);
+    navigate("/home");
   };
 
   // 👇 JSX to be rendered
@@ -109,8 +112,7 @@ const Login: FC = () => {
                 <Grid
                   item
                   xs={12}
-                  sm={6}
-                  sx={{ borderRight: { sm: '1px solid #ddd' } }}
+                  sm={12}
                 >
                   <Box
                     display='flex'
@@ -180,31 +182,6 @@ const Login: FC = () => {
                     >
                       Login
                     </LoadingButton>
-                  </Box>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <Typography
-                    variant='h6'
-                    component='p'
-                    sx={{
-                      paddingLeft: { sm: '3rem' },
-                      mb: '1.5rem',
-                      textAlign: 'center',
-                    }}
-                  >
-                    Log in with another provider:
-                  </Typography>
-                  <Box
-                    display='flex'
-                    flexDirection='column'
-                    sx={{ paddingLeft: { sm: '3rem' }, rowGap: '1rem' }}
-                  >
-                    <OauthMuiLink>
-                      Google
-                    </OauthMuiLink>
-                    <OauthMuiLink>
-                      GitHub
-                    </OauthMuiLink>
                   </Box>
                 </Grid>
               </Grid>
